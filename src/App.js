@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductListing from "./components/ProductListing";
 import ProductDetail from "./components/ProductDetail";
 import NoPage from "./components/NoPage";
-import "./index.scss";
+import "./App.scss";
 
 import Layout from "./components/Layout";
 

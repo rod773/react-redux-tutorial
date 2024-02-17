@@ -3,7 +3,7 @@ import HeaderBar from "./HeaderBar";
 
 const Layout = () => {
   return (
-    <div style={{ height: "100%" }}>
+    <div>
       <HeaderBar />
       <Outlet />
     </div>

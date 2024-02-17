@@ -33,8 +33,8 @@ const ProductListing = () => {
   console.log(products);
 
   return (
-    <div style={{ height: "100%" }}>
-      <div style={{ marginTop: "50px" }} className="ui grid container">
+    <div>
+      <div className="ui grid container">
         <ProductComponent />
       </div>
     </div>

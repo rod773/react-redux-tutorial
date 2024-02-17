@@ -5,7 +5,7 @@ import axios from "axios";
 import { setProducts } from "./../redux/actions/productActions";
 
 const ProductListing = () => {
-  const products = useSelector((state) => state);
+  const products = useSelector((state) => state.allProducts.products);
 
   const dispatch = useDispatch();
 
@@ -15,13 +15,13 @@ const ProductListing = () => {
     const config = {
       method: "GET",
       url: url,
-      "Cpntent-Type": "aplication/json",
-      Acept: "aplication/json",
+      header: {
+        "Cpntent-Type": "aplication/json",
+        Acept: "aplication/json",
+      },
     };
 
     const response = await axios(config).catch((error) => console.log(error));
-
-    console.log(response.data);
 
     dispatch(setProducts(response.data));
   };

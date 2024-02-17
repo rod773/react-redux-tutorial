@@ -34,7 +34,7 @@ const ProductListing = () => {
 
   return (
     <div>
-      <div className="ui grid container">
+      <div className="row">
         <ProductComponent />
       </div>
     </div>

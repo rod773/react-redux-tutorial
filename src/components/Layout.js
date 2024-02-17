@@ -5,7 +5,9 @@ const Layout = () => {
   return (
     <div>
       <HeaderBar />
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
     </div>
   );
 };

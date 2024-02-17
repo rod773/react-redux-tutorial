@@ -1,13 +1,11 @@
-import { Header } from "semantic-ui-react";
-
 const HeaderBar = () => {
   return (
     <div>
-      <div className="ui fixed menu">
-        <div className="ui container center">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
           <h2>FakeShop</h2>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

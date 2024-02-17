@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
 const ProductComponent = () => {
@@ -8,7 +7,7 @@ const ProductComponent = () => {
     const { id, title, image, price, category } = product;
 
     return (
-      <div className="four col wide" key={id}>
+      <div className="col-4" key={id}>
         <div className="ui link cards">
           <div className="card">
             <div className="image">

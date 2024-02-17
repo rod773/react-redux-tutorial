@@ -3,9 +3,9 @@ import HeaderBar from "./HeaderBar";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="container-fluid">
       <HeaderBar />
-      <div className="container">
+      <div className="cobtainer-fluid">
         <Outlet />
       </div>
     </div>

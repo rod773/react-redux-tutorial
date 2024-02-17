@@ -7,13 +7,13 @@ const ProductComponent = () => {
     const { id, title, image, price, category } = product;
 
     return (
-      <div className="col-4" key={id}>
-        <div className="ui link cards">
-          <div className="card">
-            <div className="image">
-              <img src={image} alt={title} />
+      <div className="col-3" key={id}>
+        <div className="card">
+          <div className="card-body">
+            <div>
+              <img src={image} alt={title} className="img-fluid" />
             </div>
-            <div className="content">
+            <div className="card-content">
               <div className="header">{title}</div>
               <div className="header">{price}</div>
               <div className="header">{category}</div>
@@ -24,7 +24,7 @@ const ProductComponent = () => {
     );
   });
 
-  return <div>{renderList}</div>;
+  return <>{renderList}</>;
 };
 
 export default ProductComponent;

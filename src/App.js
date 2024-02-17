@@ -1,9 +1,18 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductListing from "./components/ProductListing";
+import ProductDetail from "./components/ProductDetail";
+import NoPage from "./components/NoPage";
 
 function App() {
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>React Redux Tutorial</h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<ProductListing />} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

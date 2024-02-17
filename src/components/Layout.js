@@ -1,10 +1,10 @@
-import Header from "./Header";
 import { Outlet } from "react-router-dom";
+import HeaderBar from "./HeaderBar";
 
 const Layout = () => {
   return (
     <div style={{ height: "100%" }}>
-      <Header />
+      <HeaderBar />
       <Outlet />
     </div>
   );

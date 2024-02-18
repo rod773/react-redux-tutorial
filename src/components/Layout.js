@@ -3,9 +3,9 @@ import HeaderBar from "./HeaderBar";
 
 const Layout = () => {
   return (
-    <div className="container-fluid">
+    <div>
       <HeaderBar />
-      <div className="cobtainer-fluid">
+      <div className="container mx-auto">
         <Outlet />
       </div>
     </div>

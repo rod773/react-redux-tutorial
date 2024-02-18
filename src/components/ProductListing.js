@@ -34,7 +34,7 @@ const ProductListing = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row">
+      <div className="grid grid-cols-4 gap-1">
         <ProductComponent />
       </div>
     </div>

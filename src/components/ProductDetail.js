@@ -40,7 +40,7 @@ const ProductDetail = () => {
         <div>...Loading</div>
       ) : (
         <div>
-          <div className="text-2xl">Product Description</div>
+          <div className="text-2xl">Product Description {productId}</div>
         </div>
       )}
     </div>

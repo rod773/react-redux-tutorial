@@ -12,6 +12,7 @@ import {
   CardFooter,
   Typography,
   Button,
+  Spinner,
 } from "@material-tailwind/react";
 
 const ProductDetail = () => {
@@ -50,7 +51,9 @@ const ProductDetail = () => {
   return (
     <div className="grid grid-cols-2 container  items-center h-screen justify-center">
       {Object.keys(product).length === 0 ? (
-        <div>...Loading</div>
+        <div className="grid justify-end items-center">
+          <Spinner className="h-12 w-12" color="purple" />
+        </div>
       ) : (
         <>
           <div className="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">

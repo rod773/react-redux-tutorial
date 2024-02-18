@@ -30,8 +30,6 @@ const ProductListing = () => {
     fetchProducts();
   }, []);
 
-  console.log(products);
-
   return (
     <div className="container-fluid">
       <div className="grid grid-cols-4 gap-1">

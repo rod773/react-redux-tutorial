@@ -3,6 +3,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { selectedProduct } from "../redux/actions/productActions";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button,
+} from "@material-tailwind/react";
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
@@ -47,7 +54,23 @@ const ProductDetail = () => {
               alt={title}
             />
           </div>
-          <div className="text-2xl grid justify-center">{productId}</div>
+          <div className="grid justify-center">
+            <Card className="mt-6 w-96">
+              <CardBody>
+                <Typography variant="h5" color="blue-gray" className="mb-2">
+                  UI/UX Review Check
+                </Typography>
+                <Typography>
+                  The place is close to Barceloneta Beach and bus stop just 2
+                  min by walk and near to &quot;Naviglio&quot; where you can
+                  enjoy the main night life in Barcelona.
+                </Typography>
+              </CardBody>
+              <CardFooter className="pt-0">
+                <Button>Read More</Button>
+              </CardFooter>
+            </Card>
+          </div>
         </>
       )}
     </div>

@@ -15,7 +15,7 @@ const ProductListing = () => {
     const config = {
       method: "GET",
       url: url,
-      header: {
+      headers: {
         "Cpntent-Type": "aplication/json",
         Acept: "aplication/json",
       },

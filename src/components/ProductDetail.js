@@ -7,11 +7,11 @@ import { selectedProduct } from "../redux/actions/productActions";
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
 
+  const { image, title, price, category, description } = product;
+
   const { productId } = useParams();
 
   const dispatch = useDispatch();
-
-  console.log(productId);
 
   const fetchProductDetail = async () => {
     const url = `https://fakestoreapi.com/products/${productId}`;
@@ -30,9 +30,19 @@ const ProductDetail = () => {
     dispatch(selectedProduct(response.data));
   };
 
+  useEffect(() => {
+    if (productId && productId != "") fetchProductDetail();
+  }, [productId]);
+
   return (
-    <div>
-      <div className="text-2xl"></div>
+    <div className="grid container  items-center h-screen justify-center">
+      {Object.keys(product).length === 0 ? (
+        <div>...Loading</div>
+      ) : (
+        <div>
+          <div className="text-2xl">Product Description</div>
+        </div>
+      )}
     </div>
   );
 };

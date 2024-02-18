@@ -2,7 +2,10 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { selectedProduct } from "../redux/actions/productActions";
+import {
+  selectedProduct,
+  removeSelectedProduct,
+} from "../redux/actions/productActions";
 import {
   Card,
   CardBody,
@@ -39,6 +42,9 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (productId && productId != "") fetchProductDetail();
+    return () => {
+      dispatch(removeSelectedProduct());
+    };
   }, [productId]);
 
   return (
@@ -60,7 +66,7 @@ const ProductDetail = () => {
                 <Typography variant="h5" color="blue-gray" className="mb-2">
                   {title}
                 </Typography>
-                <Typography>{description.slice(0, 300)}</Typography>
+                <Typography>{description}</Typography>
               </CardBody>
               <CardFooter className="pt-0">
                 <Button>Buy Now</Button>

@@ -35,13 +35,20 @@ const ProductDetail = () => {
   }, [productId]);
 
   return (
-    <div className="grid container  items-center h-screen justify-center">
+    <div className="grid grid-cols-2 container  items-center h-screen justify-center">
       {Object.keys(product).length === 0 ? (
         <div>...Loading</div>
       ) : (
-        <div>
-          <div className="text-2xl">Product Description {productId}</div>
-        </div>
+        <>
+          <div className="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+            <img
+              className="p-3 object-cover object-center w-4/6 rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
+              src={image}
+              alt={title}
+            />
+          </div>
+          <div className="text-2xl grid justify-center">{productId}</div>
+        </>
       )}
     </div>
   );

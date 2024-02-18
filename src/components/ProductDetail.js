@@ -54,18 +54,19 @@ const ProductDetail = () => {
               alt={title}
             />
           </div>
-
-          <Card className="mt-6 w-96">
-            <CardBody>
-              <Typography variant="h5" color="blue-gray" className="mb-2">
-                {title}
-              </Typography>
-              <Typography>{description.slice(0, 300)}</Typography>
-            </CardBody>
-            <CardFooter className="pt-0">
-              <Button>Buy Now</Button>
-            </CardFooter>
-          </Card>
+          <div className="grid justify-center">
+            <Card className="mt-6 w-96">
+              <CardBody>
+                <Typography variant="h5" color="blue-gray" className="mb-2">
+                  {title}
+                </Typography>
+                <Typography>{description.slice(0, 300)}</Typography>
+              </CardBody>
+              <CardFooter className="pt-0">
+                <Button>Buy Now</Button>
+              </CardFooter>
+            </Card>
+          </div>
         </>
       )}
     </div>

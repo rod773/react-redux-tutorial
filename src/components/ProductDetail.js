@@ -52,7 +52,7 @@ const ProductDetail = () => {
     <div className="grid grid-cols-2 container  items-center h-screen justify-center">
       {Object.keys(product).length === 0 ? (
         <div className="grid justify-end items-center">
-          <Spinner className="h-12 w-12" color="purple" />
+          <Spinner className="h-16 w-16 text-gray-900/50" />
         </div>
       ) : (
         <>

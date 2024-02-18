@@ -42,7 +42,7 @@ const ProductDetail = () => {
         <>
           <div className="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
             <img
-              className="p-3 object-cover object-center w-4/6 rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
+              className="p-3 object-cover object-center  rounded-lg shadow-xl h-96 shadow-blue-gray-900/50"
               src={image}
               alt={title}
             />

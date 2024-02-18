@@ -16,7 +16,10 @@ const ProductComponent = () => {
         </div>
         <div className="p-6">
           <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            {price}
+            {title}
+          </h5>
+          <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            {price} €
           </h5>
           <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
             {description.slice(0, 50)} ...

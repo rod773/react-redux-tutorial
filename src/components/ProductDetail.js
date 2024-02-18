@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { selectedProduct } from "../redux/actions/productActions";
 
 const ProductDetail = () => {
+  const product = useSelector((state) => state.product);
+
   const { productId } = useParams();
 
   const dispatch = useDispatch();
@@ -24,7 +27,7 @@ const ProductDetail = () => {
 
     const response = await axios(config).catch((error) => console.log(error));
 
-    //dispatch(setProducts(response.data));
+    dispatch(selectedProduct(response.data));
   };
 
   return (

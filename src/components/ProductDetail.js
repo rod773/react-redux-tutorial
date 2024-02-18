@@ -63,10 +63,12 @@ const ProductDetail = () => {
           <div className="grid justify-center">
             <Card className="mt-6 w-96">
               <CardBody>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
-                  {title}
+                <Typography variant="h5" color="blue-gray">
+                  <span>{title}</span>
                 </Typography>
-                <Typography>{description}</Typography>
+                <Typography>
+                  <span>{description}</span>
+                </Typography>
               </CardBody>
               <CardFooter className="pt-0">
                 <Button>Buy Now</Button>
